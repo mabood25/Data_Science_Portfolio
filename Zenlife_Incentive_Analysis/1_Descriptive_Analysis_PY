@@ -1,1 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
 
+dfr = pd.read_excel(r'Zenlife original.xlsx')
+pd.set_option('display.max_rows', 114)
+
+dfr.head(5)
+
+dfr.columns = ['Week', 'Costa Rica', 'Panama', 'Colombia', 'Ecuador']
+dfr.drop(index=[0, 1, 2], inplace=True)
+dfr.reset_index(inplace=True)
+dfr.drop(columns=['index'], inplace=True)
+
+dff = dfr.copy()
+col_to_x = ['Costa Rica', 'Panama', 'Colombia', 'Ecuador']
+dff[col_to_x] = (dff[col_to_x] * 1000).astype(float)
+dff.to_excel('Zenlife PowerBI.xlsx', index=False)
+
+dfr.set_index('Week', inplace=True)
+dfr = dfr.astype(float)
+
+description = dfr.describe()
+sum_row = dfr.sum()
+description.loc['sum'] = sum_row
+print(description)
