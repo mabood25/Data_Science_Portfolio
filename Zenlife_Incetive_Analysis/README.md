@@ -1,4 +1,4 @@
-Analyze and visualize sales data from Zenlife's international offices to support a high-end summer campaign and allocation of incentives for Sales Representatives.
+To analyze and visualize sales data from Zenlife's international offices to support a high-end summer campaign and allocation of incentives for Sales Representatives.a
 
 **Context**: This repository is for analyzing and visualizing sales data from Zenlife's international offices to support a high-end summer campaign. It includes statistical analysis and Power BI reports, highlighting sales trends and proposing a revised incentive system for representatives. Contributions are welcome.
 
